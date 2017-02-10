@@ -1,5 +1,5 @@
 'use strict';
-const ejs=require('ejs-locals');
+const ejs=require('ejs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
