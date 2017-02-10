@@ -77,11 +77,11 @@ app.get('/setup/',function(req,res){
         var found=2;
         coords[0]=long;
         coords[1]=lat;
-        var l=tabhosp.find({loc:{
+        var m=tabhosp.find({loc:{
           $near: coords,
           $maxDistance: maxDistance}
         });
-        l.exec(function(err, result)
+        m.exec(function(err, result)
         {
         if (err)
             throw err;
