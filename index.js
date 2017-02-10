@@ -79,7 +79,7 @@ app.get('setup',function(req,res){
         tabhosp.findAll({loc:
           $near: coords,
           $maxDistance: maxDistance
-        
+          
         }).limit(limit).exec(function(err, hospitals) {
           if (err) {
             console.log("Error fetching data from coords")
