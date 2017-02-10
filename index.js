@@ -20,9 +20,9 @@ var commonSchema = new Schema(
         lat : {type: SchemaTypes.Double},
         long : {type: SchemaTypes.Double},
         pincode : {type: Number},
-        Name : {type: String},
-        Address : {type : String},
-        contacts : {type: Number},
+        name : {type: String},
+        address : {type : String},
+        contact : {type: Number},
     }
 );
 
@@ -30,6 +30,14 @@ var tabhosp = mongoose.model('hospital_table', commonSchema,'hospital_table');
 var tabchem = mongoose.model('chemist_table', commonSchema,'chemist_table');
 var tabbank = mongoose.model('bank_table', commonSchema,'bank_table');
 console.log("tables created");
+var temp = new tabhosp();
+temp.lat=28.714607;
+temp.long=77.113459;
+temp.pincode=110085;
+temp.name="Dr. Baba Saheb Ambedkar Hospital";
+temp.address="Sector 6, Rohini, Near Rohini West Metro Station, Sector 6, Rohini, Delhi, 110085";
+temp.contact=911127055585;
+temp.save(function(err){if(err)throw err;});
 // Process application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}));
 
