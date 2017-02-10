@@ -17,7 +17,7 @@ var Schema = mongoose.Schema;
 var SchemaTypes = mongoose.Schema.Types;
 var commonSchema = new Schema(
     {
-        loc{
+        loc:{
           type:[Number],
           index:'2d'
         },  
