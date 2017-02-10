@@ -67,7 +67,7 @@ app.get('/setup/',function(req,res){
         //var lat=req.query.lat;
         //var long=req.query.long;
         var limit =  10;
-        var maxDistance = 4;
+        var maxDistance = 100;
         maxDistance /= 6371;
 
     // get coordinates [ <longitude> , <latitude> ]
