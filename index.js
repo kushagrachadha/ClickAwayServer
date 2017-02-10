@@ -74,13 +74,24 @@ app.get('/setup/',function(req,res){
         var coords = [];
         //coords[0] = req.query.long;
         //coords[1] = req.query.lat;
+        var found=2;
         coords[0]=long;
         coords[1]=lat;
         var l=tabhosp.find({loc:{
           $near: coords,
           $maxDistance: maxDistance}
         });
-        res.status(200).send(JSON.stringify(l));
+        l.exec(function(err, result)
+        {
+        if (err)
+            throw err;
+        else
+            {
+               found = result;
+            }
+   });
+   deasync.loopWhile(function() {return (found === 2);});
+        res.status(200).send(JSON.stringify(found));
 });
 app.get('/c1/',function(req,res){
         var carr=[].concat(req.query.h);
