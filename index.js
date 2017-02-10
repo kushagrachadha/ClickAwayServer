@@ -11,7 +11,7 @@ const app = express();
 app.use("/styles",express.static(__dirname + "/styles"));
 app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 5000));
-mongoose.connect('mongodb://heroku_fn48jrgr:hack2017@ds149049.mlab.com:49049/heroku_fn48jrgr');
+mongoose.connect('mongodb://hack2017:kush1996@ds149049.mlab.com:49049/heroku_fn48jrgr');
 console.log("connected");
 var Schema = mongoose.Schema;
 var SchemaTypes = mongoose.Schema.Types;
