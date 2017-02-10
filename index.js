@@ -60,7 +60,7 @@ app.get('/', function (req, res)
         {
             res.send('Main View for the hospital view.');
         });
-app.get('setup',function(req,res){
+app.get('/setup/',function(req,res){
         var result;
         var lat=28.7262716;
         var long=77.1208931;
