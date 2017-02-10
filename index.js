@@ -76,7 +76,7 @@ app.get('/setup/',function(req,res){
         //coords[1] = req.query.lat;
         coords[0]=long;
         coords[1]=lat;
-        var l=tabhosp.findAll({loc:{
+        var l=tabhosp.find({loc:{
           $near: coords,
           $maxDistance: maxDistance}
         });
