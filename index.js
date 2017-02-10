@@ -1,5 +1,5 @@
 'use strict';
-const ejs=require('ejs');
+const ejs=require('ejs-locals');
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -23,7 +23,7 @@ app.get('/h1/',function(req,res){
         var harr=[].concat(req.query.h);
         var len=harr.length;
         var number='8527228188';
-        res.render(_dirname+'pages/hospitalhome',{
+        res.render(__dirname+'pages/hospitalhome',{
           hospitals: harr,
           //contact=number
         });
