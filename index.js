@@ -25,7 +25,7 @@ app.get('/h1/',function(req,res){
         var number='8527228188';
         res.render('pages/hospitalhome',{
           hospitals: harr,
-          contact=number
+          //contact=number
         });
 });
 
