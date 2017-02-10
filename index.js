@@ -76,16 +76,11 @@ app.get('setup',function(req,res){
         //coords[1] = req.query.lat;
         coords[0]=long;
         coords[1]=lat;
-        tabhosp.findAll({loc:
+        var l=tabhosp.findAll({loc:{
           $near: coords,
-          $maxDistance: maxDistance
-          
-        }).limit(limit).exec(function(err, hospitals) {
-          if (err) {
-            console.log("Error fetching data from coords")
-        }
-        req.send(hospitals);
+          $maxDistance: maxDistance}
         });
+        console.log(l);
 });
 app.get('/c1/',function(req,res){
         var carr=[].concat(req.query.h);
