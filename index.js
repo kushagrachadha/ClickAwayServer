@@ -17,8 +17,10 @@ var Schema = mongoose.Schema;
 var SchemaTypes = mongoose.Schema.Types;
 var commonSchema = new Schema(
     {
-        lat : {type: SchemaTypes.Double},
-        long : {type: SchemaTypes.Double},
+        loc{
+          type:[Number],
+          index:'2d'
+        },  
         pincode : {type: Number},
         name : {type: String},
         address : {type : String},
@@ -31,8 +33,7 @@ var tabchem = mongoose.model('chemist_table', commonSchema,'chemist_table');
 var tabbank = mongoose.model('bank_table', commonSchema,'bank_table');
 console.log("tables created");
 var temp = new tabhosp();
-temp.lat=28.714607;
-temp.long=77.113459;
+temp.loc=[77.113459,28.714607]
 temp.pincode=110085;
 temp.name="Dr. Baba Saheb Ambedkar Hospital";
 temp.address="Sector 6, Rohini, Near Rohini West Metro Station, Sector 6, Rohini, Delhi, 110085";
@@ -45,10 +46,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Index route
-app.get('/', function (req, res)
-        {
-            res.send('Main View for the hospital view.');
-        });
+
 app.get('/h1/',function(req,res){
         var harr=[].concat(req.query.h);
         var har=JSON.parse(JSON.stringify(harr));
@@ -56,6 +54,38 @@ app.get('/h1/',function(req,res){
         res.render(__dirname+'/pages/hospitalhome',{
           hospitals: har,
           //contact=number
+        });
+});
+app.get('/', function (req, res)
+        {
+            res.send('Main View for the hospital view.');
+        });
+app.get('setup',function(req,res){
+        var result;
+        var lat=28.7262716;
+        var long=77.1208931;
+        //var lat=req.query.lat;
+        //var long=req.query.long;
+        var limit =  10;
+        var maxDistance = 4;
+        maxDistance /= 6371;
+
+    // get coordinates [ <longitude> , <latitude> ]
+        var coords = [];
+        //coords[0] = req.query.long;
+        //coords[1] = req.query.lat;
+        coords[0]=long;
+        coords[1]=lat;
+        tabhosp.find({  
+        loc: {
+          $near: coords,
+          $maxDistance: maxDistance
+        }
+        }).limit(limit).exec(function(err, hospitals) {
+          if (err) {
+            console.log("Error fetching data from coords")
+        }
+        req.send(hospitals);
         });
 });
 app.get('/c1/',function(req,res){
@@ -95,4 +125,34 @@ function findthis(tab,sender)
    });
    deasync.loopWhile(function() {return (found === 2);});
    return found;
+}
+
+findLocation: function(req, res, next) {  
+    
+
+    // get the max distance or set it to 8 kilometers
+    
+
+    // we need to convert the distance to radians
+    // the raduis of Earth is approximately 6371 kilometers
+    maxDistance /= 6371;
+
+    // get coordinates [ <longitude> , <latitude> ]
+    var coords = [];
+    coords[0] = req.query.longitude;
+    coords[1] = req.query.latitude;
+
+    // find a location
+    Location.find({
+      loc: {
+        $near: coords,
+        $maxDistance: maxDistance
+      }
+    }).limit(limit).exec(function(err, locations) {
+      if (err) {
+        return res.json(500, err);
+      }
+
+      res.json(200, locations);
+    });
 }
