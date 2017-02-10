@@ -21,7 +21,7 @@ app.get('/', function (req, res)
         });
 app.get('/h1/',function(req,res){
         var harr=[];
-        harr.concat(req.query.h);
+        harr.push(req.query.h);
         res.send(harr);
 });
 
