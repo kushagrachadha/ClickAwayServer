@@ -80,7 +80,7 @@ app.get('/setup/',function(req,res){
           $near: coords,
           $maxDistance: maxDistance}
         });
-        console.log(l);
+        res.status(200).send(l);
 });
 app.get('/c1/',function(req,res){
         var carr=[].concat(req.query.h);
