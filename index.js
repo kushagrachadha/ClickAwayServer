@@ -21,10 +21,11 @@ app.get('/', function (req, res)
         });
 app.get('/h1/',function(req,res){
         var harr=[].concat(req.query.h);
+        var har=JSON.stringify(harr);
         var len=harr.length;
         var number='8527228188';
         res.render(__dirname+'/pages/hospitalhome',{
-          hospitals: harr,
+          hospitals: har,
           //contact=number
         });
 });
