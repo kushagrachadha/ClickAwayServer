@@ -2,8 +2,8 @@
 <body>
 <h2>Hospitals near you are-</h2>
 <ul>
-<% hospitals.forEach(function(h){%>
-	<l1><%=h%><br></l1>
+<% for(var i=0;i<hospitals.length;i++){%>
+	<l1><%=h[i]%><br></l1>
 <% }); %>
 </ul>
 </body>
