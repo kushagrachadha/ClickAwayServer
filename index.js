@@ -23,7 +23,7 @@ app.get('/h1/',function(req,res){
         var harr=[].concat(req.query.h);
         var len=harr.length;
         var number='8527228188';
-        res.render('pages/hospitalhome',{
+        res.render('pages/views/hospitalhome',{
           hospitals: harr,
           //contact=number
         });
