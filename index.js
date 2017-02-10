@@ -20,11 +20,9 @@ app.get('/', function (req, res)
             res.send('Main View for the hospital view.');
         });
 app.get('/h1/',function(req,res){
-        var harr=[];
-
-        harr.push(req.query.h);
-        var a=req.query.h.length;
-        res.send(a.string);
+        var harr=req.query.h;
+        var len=harr.length;
+        res.send("hospitals are"+harr+" and length is"+len.toString());
 });
 
 
