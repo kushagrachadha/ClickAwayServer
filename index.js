@@ -23,7 +23,7 @@ app.get('/h1/',function(req,res){
         var harr=[];
 
         harr.push(req.query.h);
-        res.send(req.query.h.legth);
+        res.send(req.query.h.length);
 });
 
 
