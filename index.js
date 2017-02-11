@@ -104,10 +104,10 @@ app.get('/', function (req, res)
         });
 app.get('/setup/',function(req,res){
         var result;
-        var lat=28.7262716;
-        var long=77.1208931;
-        //var lat=req.query.lat;
-        //var long=req.query.long;
+        //var lat=28.7262716;
+        //var long=77.1208931;
+        var lat=req.query.lat;
+          var long=req.query.long;
         var limit =  10;
         var maxDistance = 100;
         maxDistance /= 6371;
