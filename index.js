@@ -106,7 +106,7 @@ app.post('/setup/',function(req,res){
         deasync.loopWhile(function() {return (found === 2);});
 
         mytemp.bloodbanks = found;
-        console.log(JSON.stringify(mytemp));
+        console.log(JSON.stringify(mytemp),found);
         res.status(200).send(JSON.stringify(mytemp));
 });
 app.get('/h1/',function(req,res){
