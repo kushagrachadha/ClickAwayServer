@@ -217,8 +217,8 @@ app.get('/h1/',function(req,res){
         var type="Hospitals";
         deasync.loopWhile(function() {return (found === 2);});
         res.render(__dirname+'/pages/hospitalhome',{
-          data:found
-          banner:type;
+          data:found,
+          banner:type
         });
 });
 
