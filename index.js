@@ -189,7 +189,7 @@ app.get('/h1/',function(req,res){
         var lat=req.query.lat;
         var long=req.query.long;
         var limit =  10;
-        var maxDistance = 1000g;
+        var maxDistance = 1000;
         maxDistance /= 6371;
         var found=2;
     // get coordinates [ <longitude> , <latitude> ]
