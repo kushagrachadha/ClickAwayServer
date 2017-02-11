@@ -184,10 +184,15 @@ app.post('/setup/',function(req,res){
 });
 app.get('/h1/',function(req,res){
         var result;
+        var regex = /[+-]?\d+(\.\d+)?/g;
+        
+        var lat = req.query.lat.match(regex).map(function(v) { return parseFloat(v); });
+        console.log(lat);
+        var long = req.query.long.match(regex).map(function(v) { return parseFloat(v); });
         //var lat=28.7262716;
         //var long=77.1208931;
-        var lat=parseFloat(req.query.lat);
-        var long=parseFloat(req.query.long);
+        //var lat=parseFloat(req.query.lat);
+        //var long=parseFloat(req.query.long);
         var limit =  10;
         var maxDistance = 1000;
         maxDistance /= 6371;
