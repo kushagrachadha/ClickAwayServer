@@ -44,7 +44,7 @@ temp1.save(function(err){if(err)throw err;});
 var temp3 = new tabchem();
 temp3.loc=[77.1200085,28.7392456]
 temp3.pincode=110085;
-temp3.name="Medical shoppee";
+temp3.name="Medical shoppe";
 temp3.address="Pocket A, Block E, Sector 16E, Rohini, Delhi, 110089";
 temp3.contact=918527228188;
 temp3.save(function(err){if(err)throw err;});
