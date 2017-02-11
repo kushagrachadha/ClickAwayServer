@@ -102,12 +102,12 @@ app.get('/', function (req, res)
         {
             res.send('Main View for the hospital view.');
         });
-app.get('/setup/',function(req,res){
+app.post('/setup/',function(req,res){
         var result;
         //var lat=28.7262716;
         //var long=77.1208931;
-        var lat=req.query.lat;
-          var long=req.query.long;
+        var lat=req.body.lat;
+          var long=req.body.long;
         var limit =  10;
         var maxDistance = 100;
         maxDistance /= 6371;
@@ -214,7 +214,7 @@ app.get('/h1/',function(req,res){
         });
         deasync.loopWhile(function() {return (found === 2);});
         res.render('pages/hospitalhome',{
-          "hospital":found
+          data:found
 
         });
 });
