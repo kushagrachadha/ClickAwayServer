@@ -186,8 +186,8 @@ app.get('/h1/',function(req,res){
         var result;
         //var lat=28.7262716;
         //var long=77.1208931;
-        var lat=parseInt(req.query.lat);
-        var long=parseInt(req.query.long);
+        var lat=(+req.query.lat);
+        var long=(+req.query.long);
         var limit =  10;
         var maxDistance = 1000;
         maxDistance /= 6371;
