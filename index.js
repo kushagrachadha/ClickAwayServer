@@ -97,15 +97,7 @@ app.use(bodyParser.json());
 
 // Index route
 
-app.get('/h1/',function(req,res){
-        var harr=[].concat(req.query.h);
-        var har=JSON.parse(JSON.stringify(harr));
-        console.log(har);
-        res.render(__dirname+'/pages/hospitalhome',{
-          hospitals: har,
-          //contact=number
-        });
-});
+
 app.get('/', function (req, res)
         {
             res.send('Main View for the hospital view.');
@@ -139,8 +131,55 @@ app.get('/setup/',function(req,res){
             {
                found = result;
             }
-   });
-   deasync.loopWhile(function() {return (found === 2);});
+        });
+
+        var mytemp = {
+          "hospitals":[],
+          "bloodbanks":[],
+          "chemist":[]
+        };
+
+        deasync.loopWhile(function() {return (found === 2);});
+
+        mytemp.hospitals = found;
+        found = 2;
+        m=tabchem.find({loc:{
+          $near: coords,
+          $maxDistance: maxDistance}
+        });
+        m.exec(function(err, result)
+        {
+        if (err)
+            throw err;
+        else
+            {
+               found = result;
+            }
+        });
+
+        deasync.loopWhile(function() {return (found === 2);});
+
+        mytemp.chemist= found;
+        found = 2;
+
+        m=tabbank.find({loc:{
+          $near: coords,
+          $maxDistance: maxDistance}
+        });
+        m.exec(function(err, result)
+        {
+        if (err)
+            throw err;
+        else
+            {
+               found = result;
+            }
+        });
+
+        deasync.loopWhile(function() {return (found === 2);});
+
+        mytemp.bloodbanks = found;
+
         res.status(200).send(JSON.stringify(found));
 });
 app.get('/c1/',function(req,res){
@@ -160,7 +199,6 @@ app.listen(app.get('port'), function()
     {
         console.log('running on port', app.get('port'));
     });
-
 
 //code to query up the server
 function findthis(tab,sender)
