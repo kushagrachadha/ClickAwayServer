@@ -8,7 +8,9 @@ const mongoose = require('mongoose');
 require('mongoose-double')(mongoose);
 const app = express();
 
-app.use("/styles",express.static(__dirname + "/styles"));
+
+app.use("/styles",express.static(__dirname + "/public"));
+
 app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 5000));
 mongoose.connect('mongodb://sahil:kush1996@ds149049.mlab.com:49049/heroku_fn48jrgr');

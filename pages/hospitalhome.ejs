@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+<link href="/main.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -10,6 +10,7 @@
    <tr>
      <td><%= data[i].name %></td>
      <td><a href="tel:+<%= data[i].contact %>"><%= data[i].contact %></a></td>
+     <td><a href="tel:+<%= data[i].contact %>"></td>
    </tr>
 <% } %>
 </table>
