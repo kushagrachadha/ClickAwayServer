@@ -9,8 +9,8 @@
 <% for(var i=0; i < data.length; i++) { %>
    <tr>
      <td><%= data[i].name %></td>
-     <td><a href="tel:+<%= data[i].contact %>"><%= data[i].contact %></a></td>
-     <td><a href="tel:+<%= data[i].contact %>"></td>
+     <td><a class="button" href="tel:+<%= data[i].contact %>">Call Hospital</a></td>
+     
    </tr>
 <% } %>
 </table>
