@@ -1,11 +1,9 @@
 <html>
 <head>
 <style>
-h1 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
-
-
-h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
-p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
+h1 { color: black; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+h2 { color: blue; font-family: 'Raleway',sans-serif; font-size: 20px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 15px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
 .button {
     display: inline-block;
     text-align: center;
@@ -69,8 +67,8 @@ p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 18px; font-wei
      <h3><%= data[i].address %></h3>
      </td>
   	<tr>
-     <td><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
-     <td><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
+     <td width='50%'><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
+     <td width='50%'><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
      </tr>
    </tr>
 <% } %>
