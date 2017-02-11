@@ -60,14 +60,16 @@ p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 8px; font-weig
 
 <% for(var i=0; i < data.length; i++) { %>
    <ul style="list-style: none;">
-     <li><h2><%= data[i].name %></h2></li>
+     <li><h2><bold><%= data[i].name %></bold></h2></li>
      <li><h3><%= data[i].address %></h3></li>
   	 <li>
   	 	<table>
   	 	<tr>
-  	 	<td style="padding: 15px;">
-   		<a class="button" href="tel:+<%= data[i].contact %>">Call</a>
-     	<a class="button" href="tel:+<%= data[i].contact %>">Call</a>
+  	 	<td style="horizontal-align: left;">
+
+   		<a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
+   		<td style="horizontal-align: right;">
+     	<a class="button" href="tel:+<%= data[i].contact %>">Navigate</a></td>
 	 	</tr>
 	 	</table>
 	 </li>
