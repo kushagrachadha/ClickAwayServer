@@ -46,6 +46,7 @@ app.post('/setup/',function(req,res){
         var result;
         var lat=req.body.lat;
         var long=req.body.long;
+        console.log(lat, long);
         var limit =  10;
         var maxDistance = 100;
         maxDistance /= 6371;
