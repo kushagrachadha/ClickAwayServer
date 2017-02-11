@@ -48,7 +48,7 @@ app.post('/setup/',function(req,res){
         var long=req.body.long;
         console.log(JSON.stringify(req.body), lat, long);
         var limit =  10;
-        var maxDistance = 100;
+        var maxDistance = 1000;
         maxDistance /= 6371;
         var coords = [];
         var found=2;
