@@ -34,61 +34,61 @@ var tabhosp = mongoose.model('hospital_table', commonSchema,'hospital_table');
 var tabchem = mongoose.model('chemist_table', commonSchema,'chemist_table');
 var tabbank = mongoose.model('bank_table', commonSchema,'bank_table');
 console.log("tables created");
-var temp1 = new tabchem();
-temp1.loc=[77.1413259,28.7120974]
-temp1.pincode=110089;
-temp1.name="Akash Medicos";
-temp1.address="G-5, L.S.C 10, Near Canara Bank ATM, Giani Gurumukhi Musaphir Marg, G Block, Sector 16, Rohini, Delhi, 110089";
-temp1.contact=919711147224;
+var temp1 = new tabbank();
+temp1.loc=[77.1413259,28.706112]
+temp1.pincode=110085;
+temp1.name="Saroj Super Speciality Hospital";
+temp1.address="Near Madhuban Chowk, Sector 14, Rohini, Block A, Sector 14, Rohini, Delhi, 110085";
+temp1.contact=911147903333;
 temp1.save(function(err){if(err)throw err;});
-var temp3 = new tabchem();
-temp3.loc=[77.1200085,28.7392456]
-temp3.pincode=110085;
-temp3.name="Medical shoppe";
-temp3.address="Pocket A, Block E, Sector 16E, Rohini, Delhi, 110089";
-temp3.contact=918527228188;
+var temp3 = new tabbank();
+temp3.loc=[77.0790579,28.7123705]
+temp3.pincode=110086;
+temp3.name="Brahm Shakti Hospital";
+temp3.address="No.U-1/78, Budh Vihar, Pocket C, Budh Vihar Phase I, Budh Vihar, New Delhi, Delhi 110086";
+temp3.contact=911127531683;
 temp3.save(function(err){if(err)throw err;});
-var temp2 = new tabchem();
-temp2.loc=[77.1206316,28.736066]
+var temp2 = new tabbank();
+temp2.loc=[77.1112703,28.7146069]
 temp2.pincode=110085;
-temp2.name="Durga Medicos";
-temp2.address="Shop No 12, CSC No 7, DDA Market, Sec-16, Block F, Sector 16F, Rohini, Delhi, 110085";
-temp2.contact=919211584187;
+temp2.name="Dr. Baba Saheb Ambedkar Hospital";
+temp2.address="Sector 6, Rohini, Near Rohini West Metro Station, Delhi, 110085";
+temp2.contact=911127055585;
 temp2.save(function(err){if(err)throw err;});
-var temp4 = new tabchem();
-temp4.loc=[77.1220617,28.7343015]
-temp4.pincode=110089;
-temp4.name="Chitra Medicos";
-temp4.address="A-2/125, Pocket 2, Sector 16, Rohini, Delhi, 110089";
-temp4.contact=911127892798;
+var temp4 = new tabbank();
+temp4.loc=[77.0808462,28.693597]
+temp4.pincode=110083;
+temp4.name="Sanjay Gandhi Memorial Hospital";
+temp4.address="Block S, Mangolpuri, Mangolpuri, Delhi, 110083";
+temp4.contact=911127922843;
 temp4.save(function(err){if(err)throw err;});
-var temp5 = new tabchem();
-temp5.loc=[77.1253318,28.7328459]
+var temp5 = new tabbank();
+temp5.loc=[77.1075667,28.6977129]
 temp5.pincode=110085;
-temp5.name="Apolo Pharmacy";
-temp5.address="F-18/59, Sector 15, Sector 15B, Rohini, Delhi, 110085";
-temp5.contact=911800500101;
+temp5.name="Jaipur Golden Hospital";
+temp5.address="Plot No.2, Yog Ashram Marg, Sector 3, Institutional Area, Rohini, Institutional Area, Sector 3, Rohini, Delhi, 110085";
+temp5.contact=918888888888;
 temp5.save(function(err){if(err)throw err;});
-var temp6 = new tabchem();
-temp6.loc=[77.1251437,28.7329475]
-temp6.pincode=110089;
-temp6.name="Charchika Medicos";
-temp6.address="A-4/75, Dr KN Katju Marg, Pocket 4, Sector 16A, Rohini, Delhi, 110089";
-temp6.contact=911127299942;
+var temp6 = new tabbank();
+temp6.loc=[77.108741,28.7164723]
+temp6.pincode=110085;
+temp6.name="Rajiv Gandhi Cancer Institute & Research Institute";
+temp6.address="Sector 5, Rohini, Delhi, 110085";
+temp6.contact=911147022222;
 temp6.save(function(err){if(err)throw err;});
-var temp7 = new tabchem();
-temp7.loc=[77.1235585,28.7270555]
-temp7.pincode=110089;
-temp7.name="Oberoi Medicos";
-temp7.address="A-5/25, Dr KN Katju Marg, Pocket 5, Sector 16A, Rohini, Delhi, 110089";
-temp7.contact=911127861033;
+var temp7 = new tabbank();
+temp7.loc=[77.1792541,28.6917859]
+temp7.pincode=110052;
+temp7.name="Sunder Lal Charitable Hospital";
+temp7.address="Phase 3, Ashok Vihar, Delhi, 110052";
+temp7.contact=911147030900;
 temp7.save(function(err){if(err)throw err;});
-var temp8 = new tabchem();
-temp8.loc=[77.11991,19,28.7357424]
+var temp8 = new tabbank();
+temp8.loc=[77.0984223,28.7357424]
 temp8.pincode=110085;
-temp8.name="Family Medicare";
-temp8.address="F-2/39-40, Block F, Sector 16, Rohini, Delhi, 110085";
-temp8.contact=91127882799;
+temp8.name="Pitampura Blood Bank";
+temp8.address="B-294, SARASWATI VIHAR, OUTER RING ROAD , ABOVE YAMAHA SHOWROOM ,PITAMPURA, Block B, Saraswati Vihar, Pitampura, Delhi, 110034";
+temp8.contact=91165655155;
 temp8.save(function(err){if(err)throw err;});
 
 // Process application/x-www-form-urlencoded
