@@ -214,36 +214,16 @@ app.get('/h1/',function(req,res){
                found = result;
             }
         });
+        var type="Hospitals";
         deasync.loopWhile(function() {return (found === 2);});
         res.render(__dirname+'/pages/hospitalhome',{
           data:found
-
+          banner:type;
         });
 });
-
 
 // Spin up the server
 app.listen(app.get('port'), function()
     {
         console.log('running on port', app.get('port'));
     });
-
-//code to query up the server
-function findthis(tab,sender)
-{
-  var found =2;
-  
-  var t = tab.find();
-  
-  t.exec(function(err, result)
-  {
-    if (err)
-            throw err;
-        else
-            {
-                found = result;
-            }
-   });
-   deasync.loopWhile(function() {return (found === 2);});
-   return found;
-}
