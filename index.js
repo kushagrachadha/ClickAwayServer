@@ -186,18 +186,13 @@ app.post('/setup/',function(req,res){
 });
 app.get('/h1/',function(req,res){
         var result;
-        //var lat=28.7262716;
-        //var long=77.1208931;
         var lat=req.query.lat;
         var long=req.query.long;
         var limit =  10;
         var maxDistance = 1000;
         maxDistance /= 6371;
         var found=2;
-    // get coordinates [ <longitude> , <latitude> ]
         var coords = [];
-        //coords[0] = req.query.long;
-        //coords[1] = req.query.lat;
         var found=2;
         coords[0]=long;
         coords[1]=lat;
@@ -221,6 +216,39 @@ app.get('/h1/',function(req,res){
           banner:type
         });
 });
+app.get('/c1/',function(req,res){
+        var result;
+        var lat=req.query.lat;
+        var long=req.query.long;
+        var limit =  10;
+        var maxDistance = 1000;
+        maxDistance /= 6371;
+        var found=2;
+        var coords = [];
+        var found=2;
+        coords[0]=long;
+        coords[1]=lat;
+        var m=tabchem.find({loc:{
+          $near: coords,
+          $maxDistance: maxDistance}
+        });
+        m.exec(function(err, result)
+        {
+        if (err)
+            throw err;
+        else
+            {
+               found = result;
+            }
+        });
+        var type="Chemists";
+        deasync.loopWhile(function() {return (found === 2);});
+        res.render(__dirname+'/pages/hospitalhome',{
+          data:found,
+          banner:type
+        });
+});
+
 
 // Spin up the server
 app.listen(app.get('port'), function()
