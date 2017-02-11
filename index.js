@@ -32,61 +32,61 @@ var tabhosp = mongoose.model('hospital_table', commonSchema,'hospital_table');
 var tabchem = mongoose.model('chemist_table', commonSchema,'chemist_table');
 var tabbank = mongoose.model('bank_table', commonSchema,'bank_table');
 console.log("tables created");
-var temp1 = new tabhosp();
-temp1.loc=[77.1310776,28.7308195]
+var temp1 = new tabchem();
+temp1.loc=[77.1413259,28.7120974]
 temp1.pincode=110089;
-temp1.name="Sunrise Hospital";
-temp1.address="8-B, Plot No-1, B4 Rd, Sector 15, Pocket 1, Rohini, Delhi, 110089";
-temp1.contact=911127894780;
+temp1.name="Akash Medicos";
+temp1.address="G-5, L.S.C 10, Near Canara Bank ATM, Giani Gurumukhi Musaphir Marg, G Block, Sector 16, Rohini, Delhi, 110089";
+temp1.contact=919711147224;
 temp1.save(function(err){if(err)throw err;});
-var temp3 = new tabhosp();
-temp3.loc=[77.1310776,28.7308195]
+var temp3 = new tabchem();
+temp3.loc=[77.1200085,28.7392456]
 temp3.pincode=110085;
-temp3.name="Saroj Super Speciality Hospital";
-temp3.address="Near Madhuban Chowk, Sector 14, Rohini, Delhi, 110085";
-temp3.contact=911147903333;
+temp3.name="Medical shoppee";
+temp3.address="Pocket A, Block E, Sector 16E, Rohini, Delhi, 110089";
+temp3.contact=918527228188;
 temp3.save(function(err){if(err)throw err;});
-var temp2 = new tabhosp();
-temp2.loc=[77.0112063,28.7123525]
-temp2.pincode=110086;
-temp2.name="Brahm Shakti Hospital";
-temp2.address=" No.U-1/78, Budh Vihar, New Delhi, Delhi 110086";
-temp2.contact=911127531386;
+var temp2 = new tabchem();
+temp2.loc=[77.1206316,28.736066]
+temp2.pincode=110085;
+temp2.name="Durga Medicos";
+temp2.address="Shop No 12, CSC No 7, DDA Market, Sec-16, Block F, Sector 16F, Rohini, Delhi, 110085";
+temp2.contact=919211584187;
 temp2.save(function(err){if(err)throw err;});
-var temp4 = new tabhosp();
-temp4.loc=[77.0696299,28.733512]
+var temp4 = new tabchem();
+temp4.loc=[77.1220617,28.7343015]
 temp4.pincode=110089;
-temp4.name="Ishan Hospital";
-temp4.address="Plot No.1, Pocket-8B, Dr MC Davar Marg, Sector 19, Rohini, Delhi, 110089";
+temp4.name="Chitra Medicos";
+temp4.address="A-2/125, Pocket 2, Sector 16, Rohini, Delhi, 110089";
 temp4.contact=911127892798;
 temp4.save(function(err){if(err)throw err;});
-var temp5 = new tabhosp();
-temp5.loc=[77.1785709,28.710125]
-temp5.pincode=110089;
-temp5.name="Nirvana Hospital";
-temp5.address="42, Badli Rd, Sector 15, Pocket 1, Sector 15C, Rohini, Delhi, 110089";
-temp5.contact=911149055088;
+var temp5 = new tabchem();
+temp5.loc=[77.1253318,28.7328459]
+temp5.pincode=110085;
+temp5.name="Apolo Pharmacy";
+temp5.address="F-18/59, Sector 15, Sector 15B, Rohini, Delhi, 110085";
+temp5.contact=911800500101;
 temp5.save(function(err){if(err)throw err;});
-var temp6 = new tabhosp();
-temp6.loc=[77.0717018,28.7327251]
-temp6.pincode=110042;
-temp6.name="Aastha Hospital";
-temp6.address="Badli Rd, Sector 19, Rohini, New Delhi, Delhi 110042";
-temp6.contact=911147903333;
+var temp6 = new tabchem();
+temp6.loc=[77.1251437,28.7329475]
+temp6.pincode=110089;
+temp6.name="Charchika Medicos";
+temp6.address="A-4/75, Dr KN Katju Marg, Pocket 4, Sector 16A, Rohini, Delhi, 110089";
+temp6.contact=911127299942;
 temp6.save(function(err){if(err)throw err;});
-var temp7 = new tabhosp();
+var temp7 = new tabchem();
 temp7.loc=[77.1235585,28.7270555]
-temp7.pincode=110085;
-temp7.name="ESI Hospital";
-temp7.address="Opp HP Petrol Pump, Sector 15A, Rohini, New Delhi, Delhi";
+temp7.pincode=110089;
+temp7.name="Oberoi Medicos";
+temp7.address="A-5/25, Dr KN Katju Marg, Pocket 5, Sector 16A, Rohini, Delhi, 110089";
 temp7.contact=911127861033;
 temp7.save(function(err){if(err)throw err;});
-var temp8 = new tabhosp();
-temp8.loc=[77.0470234,28.7471097]
-temp8.pincode=110042;
-temp8.name="Health Hospital";
-temp8.address="Delhi Technological University, Shahbad Daulatpur Village, Rohini, Delhi, 110042";
-temp8.contact=911127272727;
+var temp8 = new tabchem();
+temp8.loc=[77.11991,19,28.7357424]
+temp8.pincode=110085;
+temp8.name="Family Medicare";
+temp8.address="F-2/39-40, Block F, Sector 16, Rohini, Delhi, 110085";
+temp8.contact=91127882799;
 temp8.save(function(err){if(err)throw err;});
 
 // Process application/x-www-form-urlencoded
