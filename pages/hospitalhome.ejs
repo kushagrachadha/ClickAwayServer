@@ -1,6 +1,11 @@
 <html>
 <head>
 <style>
+h1 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+
+
+h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
 .button {
     display: inline-block;
     text-align: center;
@@ -53,13 +58,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h2><%=banner %> near you are-</h2>
+<h1><%=banner %> near you are-</h1>
 <table>
 <% for(var i=0; i < data.length; i++) { %>
    <tr>
-     <td><%= data[i].name %></td>
+     <td><h2><%= data[i].name %></h2></td>
+     </tr>
+     <tr>
+     <td>
+     <h3><%= data[i].address %></h3>
+     </td>
+  	<tr>
      <td><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
-     
+     <td><a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
+     </tr>
    </tr>
 <% } %>
 </table>
