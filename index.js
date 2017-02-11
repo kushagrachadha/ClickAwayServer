@@ -49,7 +49,7 @@ app.post('/setup/',function(req,res){
         var limit =  10;
         var maxDistance = 100;
         maxDistance /= 6371;
-        var coords = [];;
+        var coords = [];
         var found=2;
         coords[0]=long;
         coords[1]=lat;
@@ -106,8 +106,8 @@ app.post('/setup/',function(req,res){
         deasync.loopWhile(function() {return (found === 2);});
 
         mytemp.bloodbanks = found;
-
-        res.status(200).send(JSON.stringify(mytemp, null, 3));
+        console.log(JSON.stringify(mytemp));
+        res.status(200).send(JSON.stringify(mytemp));
 });
 app.get('/h1/',function(req,res){
         var result;
