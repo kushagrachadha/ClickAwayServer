@@ -69,7 +69,7 @@ p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 8px; font-weig
 
    		<a class="button" href="tel:+<%= data[i].contact %>">Call</a></td>
    		<td style="horizontal-align: right; width:50%">
-     	<a class="button" href="http://maps.google.com/maps?daddr=<%= data[i].loc.lat %>,<%= data[i].loc.long %>&amp;ll=">Navigate</a></td>
+     	<a class="button" href="http://maps.google.com/maps?daddr=<%= data[i].loc.type[1] %>,<%= data[i].loc.type[0] %>&amp;ll=">Navigate</a></td>
 	 	</tr>
 	 	</table>
 	 </li>
