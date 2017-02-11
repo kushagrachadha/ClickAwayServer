@@ -182,15 +182,38 @@ app.get('/setup/',function(req,res){
 
         res.status(200).send(JSON.stringify(mytemp, null, 3));
 });
-app.get('/c1/',function(req,res){
-        var carr=[].concat(req.query.h);
-        var car=JSON.parse(JSON.stringify(harr));
-        var number='8527228188';
-        console.log(car);
-        res.render(__dirname+'/pages/chemisthome',{
-          chemists: car,
-          //contact=number
+app.get('/h1/',function(req,res){
+        var result;
+        var lat=28.7262716;
+        var long=77.1208931;
+        //var lat=req.query.lat;
+        //var long=req.query.long;
+        var limit =  10;
+        var maxDistance = 100;
+        maxDistance /= 6371;
+        var found=2;
+    // get coordinates [ <longitude> , <latitude> ]
+        var coords = [];
+        //coords[0] = req.query.long;
+        //coords[1] = req.query.lat;
+        var found=2;
+        coords[0]=long;
+        coords[1]=lat;
+        var m=tabhosp.find({loc:{
+          $near: coords,
+          $maxDistance: maxDistance}
         });
+        m.exec(function(err, result)
+        {
+        if (err)
+            throw err;
+        else
+            {
+               found = result;
+            }
+        });
+        deasync.loopWhile(function() {return (found === 2);});
+        res.render('pages/hospitalhome')
 });
 
 
