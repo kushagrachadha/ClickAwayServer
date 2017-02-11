@@ -180,7 +180,7 @@ app.get('/setup/',function(req,res){
 
         mytemp.bloodbanks = found;
 
-        res.status(200).send(JSON.stringify(found));
+        res.status(200).send(JSON.stringify(mytemp));
 });
 app.get('/c1/',function(req,res){
         var carr=[].concat(req.query.h);
