@@ -214,7 +214,7 @@ app.get('/h1/',function(req,res){
         });
         deasync.loopWhile(function() {return (found === 2);});
         res.render('pages/hospitalhome',{
-          "hospital"=found;
+          "hospital":found;
 
         });
 });
