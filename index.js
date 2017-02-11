@@ -213,7 +213,7 @@ app.get('/h1/',function(req,res){
             }
         });
         deasync.loopWhile(function() {return (found === 2);});
-        res.render('pages/hospitalhome',{
+        res.render(__dirname+'/pages/hospitalhome',{
           data:found
 
         });
