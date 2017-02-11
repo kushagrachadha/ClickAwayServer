@@ -32,13 +32,63 @@ var tabhosp = mongoose.model('hospital_table', commonSchema,'hospital_table');
 var tabchem = mongoose.model('chemist_table', commonSchema,'chemist_table');
 var tabbank = mongoose.model('bank_table', commonSchema,'bank_table');
 console.log("tables created");
-var temp = new tabhosp();
-temp.loc=[77.113459,28.714607]
-temp.pincode=110085;
-temp.name="Dr. Baba Saheb Ambedkar Hospital";
-temp.address="Sector 6, Rohini, Near Rohini West Metro Station, Sector 6, Rohini, Delhi, 110085";
-temp.contact=911127055585;
-temp.save(function(err){if(err)throw err;});
+var temp1 = new tabhosp();
+temp1.loc=[77.1310776,28.7308195]
+temp1.pincode=110089;
+temp1.name="Sunrise Hospital";
+temp1.address="8-B, Plot No-1, B4 Rd, Sector 15, Pocket 1, Rohini, Delhi, 110089";
+temp1.contact=911127894780;
+temp1.save(function(err){if(err)throw err;});
+var temp3 = new tabhosp();
+temp3.loc=[77.1310776,28.7308195]
+temp3.pincode=110085;
+temp3.name="Saroj Super Speciality Hospital";
+temp3.address="Near Madhuban Chowk, Sector 14, Rohini, Delhi, 110085";
+temp3.contact=911147903333;
+temp3.save(function(err){if(err)throw err;});
+var temp2 = new tabhosp();
+temp2.loc=[77.0112063,28.7123525]
+temp2.pincode=110086;
+temp2.name="Brahm Shakti Hospital";
+temp2.address=" No.U-1/78, Budh Vihar, New Delhi, Delhi 110086";
+temp2.contact=911127531386;
+temp2.save(function(err){if(err)throw err;});
+var temp4 = new tabhosp();
+temp4.loc=[77.0696299,28.733512]
+temp4.pincode=110089;
+temp4.name="Ishan Hospital";
+temp4.address="Plot No.1, Pocket-8B, Dr MC Davar Marg, Sector 19, Rohini, Delhi, 110089";
+temp4.contact=911127892798;
+temp4.save(function(err){if(err)throw err;});
+var temp5 = new tabhosp();
+temp5.loc=[77.1785709,28.710125]
+temp5.pincode=110089;
+temp5.name="Nirvana Hospital";
+temp5.address="42, Badli Rd, Sector 15, Pocket 1, Sector 15C, Rohini, Delhi, 110089";
+temp5.contact=911149055088;
+temp5.save(function(err){if(err)throw err;});
+var temp6 = new tabhosp();
+temp6.loc=[77.0717018,28.7327251]
+temp6.pincode=110042;
+temp6.name="Aastha Hospital";
+temp6.address="Badli Rd, Sector 19, Rohini, New Delhi, Delhi 110042";
+temp6.contact=911147903333;
+temp6.save(function(err){if(err)throw err;});
+var temp7 = new tabhosp();
+temp7.loc=[77.1235585,28.7270555]
+temp7.pincode=110085;
+temp7.name="ESI Hospital";
+temp7.address="Opp HP Petrol Pump, Sector 15A, Rohini, New Delhi, Delhi";
+temp7.contact=911127861033;
+temp7.save(function(err){if(err)throw err;});
+var temp8 = new tabhosp();
+temp8.loc=[77.0470234,28.7471097]
+temp8.pincode=110042;
+temp8.name="Health Hospital";
+temp8.address="Delhi Technological University, Shahbad Daulatpur Village, Rohini, Delhi, 110042";
+temp8.contact=911127272727;
+temp8.save(function(err){if(err)throw err;});
+
 // Process application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}));
 
